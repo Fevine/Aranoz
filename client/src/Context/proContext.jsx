@@ -10,7 +10,7 @@ export const ProProvider = ({ children }) => {
 
   async function GetPros() {
     try {
-      const response = await axios.get("http://localhost:3000/pro");
+      const response = await axios.get("http://localhost:3000/product/get-all");
       console.log(response.data);
       setPro(response.data);
       setIsLoading(false)

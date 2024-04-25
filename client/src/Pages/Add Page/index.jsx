@@ -15,7 +15,7 @@ function AddPage() {
 
   async function Post(values) {
     try {
-      const response = await axios.post("http://localhost:3000/pro", values);
+      const response = await axios.post("http://localhost:3000/product/create", values);
       console.log(response.data);
       GetPros();
     } catch (error) {
@@ -25,7 +25,7 @@ function AddPage() {
 
   async function DeletePro(id) {
     try {
-      const response = await axios.delete(`http://localhost:3000/pro/${id}`);
+      const response = await axios.delete(`http://localhost:3000/product/delete-by-id/${id}`);
       console.log(response.data);
       GetPros();
     } catch (error) {
